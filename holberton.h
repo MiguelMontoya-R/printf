@@ -8,9 +8,9 @@
  */
 typedef struct print
 {
-	char *t;
-	int (*f)(va_list);
-} print_t;
+	char *ptr; /* pointer to string "string", var */
+	int (*fptr)(va_list); /* function pointer to va_args */
+} s_print;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
