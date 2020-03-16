@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdarg.h>
 /**
  * _printf - function that produces output according to a format.
  * @format: list of types of arguments passed to the function.
@@ -9,6 +9,6 @@
 
 int _printf(const char *format, ...)
 {
-
+	va_list formats;
 
 }
