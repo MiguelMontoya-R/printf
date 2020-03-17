@@ -31,13 +31,13 @@ int _printf(const char *format, ...)
 			else
 			{
 				link = format_checker(&format[i + 1]);
-				if (link == NULL)
-					return (-1);
-				else
+				if (link != NULL)
 				{
-				i = i + 1;
-				count += link(ap);
+					i = i + 1;
+					count += link(ap);
 				}
+				else
+					return (-1);
 			}
 		}
 		else
