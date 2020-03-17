@@ -1,31 +1,24 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef _HOLBERTON_H
+#define _HOLBERTON_H
 #include <stdarg.h>
+#include <stdio.h>
+
 /**
  * struct print - structure for printing various types
- * @t: type to print
- * @f: function to print
+ * @ptr: specifiers list.
+ * @link: link to the function to print.
  */
+
 typedef struct print
 {
 	char *ptr; /* pointer to string "string", var */
-	int (*fptr)(va_list); /* function pointer to va_args */
-} s_print;
+	int (*link)(va_list); /* function pointer to va_args */
+} format_list;
 
-int _putchar(char c);
+int (*format_checker(const char *specifier))(va_list);
 int _printf(const char *format, ...);
-int print_c(va_list c);
-int print_s(va_list s);
-int print_i(va_list i);
-int print_d(va_list d);
-int print_u(va_list u);
-int print_b(va_list b);
-int print_o(va_list o);
-int print_x(va_list x);
-int print_X(va_list X);
-int print_p(va_list p);
-int print_S(va_list S);
-int print_r(va_list r);
-int print_R(va_list R);
+int _putchar(char c);
+int print_cha(va_list ap);
+int print_str(va_list ap);
 
 #endif
