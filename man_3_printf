@@ -10,7 +10,12 @@ _printf
 .I OPTION
 .SH DESCRIPTION
 _printf  output	according to a format. This specifically write output to stdout or standard output stream.
-
+You can use this to use _printf function:
+"%%" to print a "%" character.
+"%c" to print a single character with variable. _printf("This works: %c", %sVar);
+"%s" to print a string with variable. _printf("This works: %s", %sVar);
+"\n" to print a new line. _printf("New line\n");
+"\t" to tab
 .SH SEE ALSO
 printf(1), puts(3)
 .SH BUGS
