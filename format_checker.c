@@ -13,6 +13,9 @@ int (*format_checker(const char *specifier))(va_list)
 	format_list format[] = {
 		{"c", print_cha},
 		{"s", print_str},
+		{"r", print_rev},
+		{"i", print_int},
+		{"d", print_dec},
 		{NULL, NULL}
 	};
 
