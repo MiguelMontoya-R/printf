@@ -7,14 +7,22 @@
  */
 int print_rev(va_list ap)
 {
-	char *revs = va_arg(ap, char *);
+	int counter, n;
+	char *string = va_arg(ap, char *);
 
-	if (*revs)
+	counter = 0;
+
+	while (string[counter] != '\0')
 	{
-		print_rev(revs + 1);
-		_putchar(*revs);
 		counter++;
-		s++;
 	}
+
+	n = counter - 1;
+	while (n >= 0)
+	{
+		_putchar(string[n]);
+		n--;
+	}
+	_putchar('\n');
 	return (counter);
 }
