@@ -40,7 +40,7 @@ void print_num_rec2(int n)
 
 int print_dec(va_list ap)
 {
-	int n = 0, count = 0;
+	int n = 0, count = 1;
 
 	n = va_arg(ap, int);
 
