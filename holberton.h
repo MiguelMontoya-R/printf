@@ -12,7 +12,7 @@
 typedef struct print
 {
 	char *ptr; /* pointer to string "string", var */
-	int (*link)(va_list); /* function pointer to va_args */
+	int (*link)(); /* function pointer to va_args */
 } format_list;
 
 int (*format_checker(const char *specifier))(va_list);
