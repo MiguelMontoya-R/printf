@@ -15,25 +15,22 @@ int print_rot(va_list ap)
 
 	str = va_arg(ap, char *);
 
-	while (str[ia])
+	for (; str[ia]; ia++)
 	{
-		for (ib = 0; str1[ib]; )
+		for (ib = 0; str1[ib]; ib++)
 		{
 			if (str[ia] == str1[ib])
 			{
 				_putchar(str2[ib]);
 				count++;
-				ia++;
-				ib = 0;
+				break;
 			}
-			ib++;
 		}
 		if (str1[ib] == '\0')
 		{
 			_putchar(str[ia]);
 			count++;
 		}
-		ia++;
 	}
 	return (count);
 }
