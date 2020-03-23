@@ -1,28 +1,34 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
- * print_rev - print string in reverse
- * @ap: argument
+ * print_rec - print in reverse with recursion
+ * @str: pointer to string
+ * Return: void
+ */
+void print_rec(char *str)
+{
+	if (*str)
+	{
+		print_rec(str + 1);
+		_putchar(*str);
+	}
+}
+/**
+ * print_rev - print a string in reverse
+ *
+ * @ap: va_list
  * Return: counter
  */
 int print_rev(va_list ap)
 {
-	int counter, n;
-	char *string = va_arg(ap, char *);
+	int counter = 0;
+	char *str;
 
-	counter = 0;
+	str = va_arg(ap, char *);
 
-	while (string[counter] != '\0')
-	{
+	while (str[counter])
 		counter++;
-	}
 
-	n = counter - 1;
-	while (n >= 0)
-	{
-		_putchar(string[n]);
-		n--;
-	}
-	_putchar('\n');
-	return (counter);
+	print_rec(str);
+
+	return counter;
 }
