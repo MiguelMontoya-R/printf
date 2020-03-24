@@ -30,5 +30,5 @@ int print_rev(va_list ap)
 
 	print_rec(str);
 
-	return counter;
+	return (counter);
 }
