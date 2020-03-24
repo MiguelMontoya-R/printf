@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * rot13 - function that encodes a string using rot13.
- * @s: given string
- * Return: encoden string
+ * print_rot - function that encodes a string using rot13.
+ * @ap: Argument parameter
+ * Return: number of printed characters.
  */
 
 int print_rot(va_list ap)
