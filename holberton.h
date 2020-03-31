@@ -24,5 +24,6 @@ int print_int(va_list ap);
 int print_dec(va_list ap);
 int print_rev(va_list ap);
 int print_rot(va_list ap);
+int print_bin(va_list ap);
 
 #endif

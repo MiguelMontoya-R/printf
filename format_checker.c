@@ -17,6 +17,7 @@ int (*format_checker(const char *specifier))(va_list)
 		{"i", print_int},
 		{"d", print_dec},
 		{"R", print_rot},
+		{"b", print_bin},
 		{NULL, NULL}
 	};
 
